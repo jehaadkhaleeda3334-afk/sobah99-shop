@@ -363,3 +363,97 @@ img{max-width:100%;display:block}
 .trust div{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:14px;font-weight:600;line-height:1.4}
 .trust svg{width:30px;height:30px;flex:none;color:#A9843E}
 @media(min-width:760px){.trust{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ================= هوية ٩٩ للسبح (تصميم فاتح مختلف) ================= */
+:root{
+  --navy:#3E536B; --navy-2:#2F4055; --cream:#FFFFFF; --bg:#F4F6F9; --paper:#FFFFFF; --ink:#22303F; --muted:#5F6B7A;
+  --line:#DCE3EB; --bronze:#5E7C9B; --bronze-d:#3E536B; --pearl:#E9EEF4; --sky:#DCE6F0;
+  --f-display:"Amiri","Tajawal",serif;
+  --f-body:"Tajawal",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+}
+body{background:var(--bg)}
+h1,h2,h3{font-weight:700;letter-spacing:0}
+
+/* شريط علوي + هيدر فاتح */
+.strip{background:var(--navy);color:#EEF2F6}
+.strip b{color:#fff}
+.head{background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(46,64,85,.06)}
+.head .wrap{height:66px}
+.head .back,.menubtn,.cartbtn{border-color:var(--line);color:var(--navy);background:var(--pearl)}
+.cartbtn{border-radius:999px}
+.menubtn{border-radius:50%}
+.cartbtn .cnt{background:var(--navy)}
+.nbadge{border-color:#fff}
+
+/* الواجهة الأولى: لؤلؤي فاتح */
+.story{background:var(--pearl);color:var(--ink)}
+.sl.brand{background:radial-gradient(120% 90% at 50% 0%,#FFFFFF 0%,#E9EEF4 55%,#D5DFEA 100%)}
+.sl.brand img.lg{width:min(58%,260px);filter:drop-shadow(0 10px 24px rgba(62,83,107,.18))}
+.sl.brand p{color:var(--navy);font-family:var(--f-display);font-size:24px}
+.story .bars i{background:rgba(62,83,107,.18)}
+.story .bars b{background:var(--navy)}
+.cue{color:var(--navy)}
+.sl .go{background:var(--navy);color:#fff}
+
+/* الأقسام: مربعات ناعمة بدل الكبسولات */
+.chips{top:calc(66px + env(safe-area-inset-top,0px));background:rgba(244,246,249,.96);border-bottom:0}
+.chip{border-radius:12px;background:#fff;border-color:var(--line);color:var(--ink);font-weight:500}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(62,83,107,.25)}
+
+/* العناوين */
+.sec-h h2{font-size:30px;color:var(--navy)}
+.sec-h h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;background:var(--bronze);margin-top:4px}
+
+/* بطاقات المنتجات: بطاقة بيضاء بظل */
+.card{background:#fff;border-radius:20px;padding:8px 8px 12px;box-shadow:0 4px 18px rgba(46,64,85,.07);gap:6px}
+.card .nm,.card .meta,.card .row{padding-inline:6px}
+.ph{border:0;border-radius:14px;background:var(--pearl)}
+.ph .tag{background:var(--navy);color:#fff;border:0}
+.pr{color:var(--navy);font-size:18px}
+.add{border-radius:999px;background:var(--pearl);color:var(--navy);border:1px solid var(--line);font-weight:700}
+.add:hover{background:var(--navy);color:#fff}
+.empty-box{border:0;background:#fff;box-shadow:0 4px 18px rgba(46,64,85,.07);border-radius:20px}
+.empty-box svg{color:var(--bronze)}
+
+/* الأزرار */
+.btn{border-radius:999px;color:#fff}
+.btn.ghost{color:var(--navy);border-color:var(--line);background:#fff}
+.field input:focus,.field textarea:focus,.field select:focus{outline-color:var(--bronze);border-color:var(--bronze)}
+:focus-visible{outline-color:var(--bronze)}
+
+/* قسم "لماذا تختار": فاتح ببطاقات */
+.why{background:linear-gradient(180deg,var(--bg),var(--sky));color:var(--ink)}
+.why .gt{background:none;color:var(--navy);-webkit-background-clip:initial;background-clip:initial}
+.whyl li{background:#fff;border:0;border-radius:18px;box-shadow:0 4px 18px rgba(46,64,85,.07)}
+.whyl i{border-radius:50%;transform:none;width:12px;height:12px;background:radial-gradient(circle at 35% 30%,#fff,#A8B8CC 60%,#5E7C9B)}
+.whyl b{color:var(--navy)}
+.whyl span{color:var(--muted)}
+.offl li{border-color:var(--line);background:#fff;color:var(--navy)}
+
+/* الفوتر */
+.foot{background:var(--navy-2);color:#C9D3DE}
+.why + .foot{border-top:0}
+.foot a{color:#fff}
+.foot .wrap>div:first-child>div,.foot .fbrand div,.gt2,.pol summary{color:#fff}
+.pol,.rights{border-top-color:rgba(255,255,255,.14)}
+.pol ul{color:#C9D3DE}
+.rights{color:#9FB0C2}
+
+/* القائمة الجانبية والنوافذ */
+.drawer .dh{background:#fff;border-bottom:1px solid var(--line)}
+.drawer .x{color:var(--navy)}
+.dlg img{background:transparent;padding:0;height:84px}
+
+/* عناصر الدفع والعروض بألوان الهوية */
+.offer{background:linear-gradient(120deg,#3E536B,#5E7C9B);border-color:#A8B8CC;color:#fff}
+.offer .ot b,.offer .left b{color:#fff}
+.offer .ocode{background:#fff;color:var(--navy);border-color:var(--navy)}
+.fastpay{border-color:var(--line);background:var(--pearl)}
+.fastpay b{color:var(--navy)}
+.iban,.line .t{background:var(--pearl)}
+.ttbar,.ftt,.drawer .wal.stt,.drawer .dtt{border-color:#5E7C9B}
+.ttbar .tta{background:#fff;color:var(--navy)}
+.wv,.wv video{background:var(--navy-2)}
+.trust div{border:0;border-radius:18px;box-shadow:0 4px 18px rgba(46,64,85,.07);flex-direction:column;text-align:center;gap:6px;padding:14px 10px}
+.trust svg{color:var(--navy);width:34px;height:34px;padding:7px;box-sizing:content-box;background:var(--pearl);border-radius:50%}
+.why .gt::after{background:var(--bronze)}

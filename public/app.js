@@ -146,7 +146,7 @@ function footer() {
   var pol = String(s.return_policy || '').split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
   var yr = new Date().getFullYear();
   return whyHTML() + '<footer class="foot"><div class="wrap fcols">' +
-    '<div class="fbrand"><img src="/img/logo.png" alt="٩٩ للسبح"><div>سبح مختارة بعناية</div></div>' +
+    '<div class="fbrand"><img src="/img/logo-light.png" alt="٩٩ للسبح"><div>سبح مختارة بعناية</div></div>' +
     '<div class="fcontact"><h3 class="gt2">تواصل معنا</h3><div>' + esc(s.support_text || '') + '</div>' +
     '<div class="fbtns">' + (wa ? '<a class="fwa" href="https://wa.me/' + esc(wa) + '" target="_blank" rel="noopener">' + ICON.wa + '<span>راسلنا على واتساب</span></a>' : '') +
     (ttURL() ? '<a class="ftt" href="' + esc(ttURL()) + '" target="_blank" rel="noopener">' + ICON.tt + '<span>تابعنا على تيك توك</span></a>' : '') +
