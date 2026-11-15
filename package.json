@@ -1,0 +1,9 @@
+{
+  "name": "sobah99-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "متجر ٩٩ للسبح لبيع السبح (بدون أي مكتبات خارجية)",
+  "main": "server.js",
+  "scripts": { "start": "node start.js" },
+  "engines": { "node": ">=22.13" }
+}

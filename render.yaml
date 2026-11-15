@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sobah99-shop
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/store
+    envVars:
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: DATA_DIR
+        value: /data
+      - key: BACKUP_REPO
+        value: jehaadkhaleeda3334-afk/sobah99-backup
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: BACKUP_GITHUB_TOKEN
+        sync: false

@@ -1,0 +1,17 @@
+name: keep-store-awake
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping store
+        run: |
+          for i in 1 2 3; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 60 https://sobah99-shop.onrender.com/api/store) && echo "HTTP $code" && [ "$code" = "200" ] && exit 0
+            sleep 20
+          done
+          exit 0

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>لوحة إشراف ٩٩ للسبح</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#3E536B">
+<link rel="icon" type="image/png" href="/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap">
+<link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+
+<section id="login" class="login" hidden>
+  <form data-form="login" novalidate>
+    <div class="lg"><img src="/img/logo.png" alt="٩٩ للسبح"></div>
+    <h1>لوحة إشراف ٩٩ للسبح</h1>
+    <label class="field"><span>البريد الإلكتروني</span><input name="email" type="email" autocomplete="username" dir="ltr" class="ltr" required></label>
+    <label class="field"><span>كلمة المرور</span><input name="password" type="password" autocomplete="current-password" dir="ltr" class="ltr" required></label>
+    <p id="login-error" class="err" role="alert" hidden></p>
+    <button class="btn primary block" type="submit">دخول</button>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="wrap">
+      <span class="who"><img src="/img/logo.png" alt="٩٩ للسبح"><span>لوحة الإشراف</span></span>
+      <span class="topbtns"><a class="btn-o" href="/" target="_blank" rel="noopener">المتجر</a><button class="btn-o" type="button" data-act="logout">خروج</button></span>
+    </div>
+  </header>
+  <nav class="tabs" aria-label="أقسام اللوحة"><div class="wrap" id="tabs"></div></nav>
+  <div id="newalert" class="newalert" role="alert" hidden>
+    <div class="wrap">
+      <strong>جاء طلب جديد</strong>
+      <span class="abtns"><button class="btn primary sm" type="button" data-act="alertOpen">عرض الطلبات الجديدة</button><button class="btn ghost sm" type="button" data-act="alertClose">إغلاق</button></span>
+    </div>
+  </div>
+  <main class="wrap" id="view"></main>
+</div>
+
+<dialog id="confirm" aria-labelledby="confirm-msg">
+  <p id="confirm-msg"></p>
+  <div class="actions"><button class="btn danger" id="confirm-ok" type="button" data-act="askYes">تأكيد</button><button class="btn ghost" type="button" data-act="askNo">تراجع</button></div>
+</dialog>
+<dialog id="sheet" aria-labelledby="sheet-title"></dialog>
+<dialog id="receipt" aria-label="إيصال التحويل">
+  <div class="sheet-head"><button class="icon-btn" type="button" data-act="closeReceipt" aria-label="إغلاق">&times;</button><h2>إيصال التحويل</h2></div>
+  <div id="receipt-body" class="receipt-body"></div>
+</dialog>
+<div id="toasts" role="status" aria-live="polite"></div>
+
+<script src="/admin.js"></script>
+</body>
+</html>
